@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMS Top Up - Choose Business</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Screen 1: Business Selection -->
+        <div id="screen1" class="screen active">
+            <div class="card">
+                <h2>SMS Top Up</h2>
+                <h3>Choose Business</h3>
+                
+                <div class="dropdown-container">
+                    <select id="businessSelect" class="business-dropdown">
+                        <option value="">- Select -</option>
+                        <option value="silvertree">Silvertree Restaurants</option>
+                        <option value="gordon">Gordon Grill</option>
+                        <option value="norman">Norman's Cafe</option>
+                        <option value="nisha">Nisha's Boulangerie</option>
+                        <option value="binjai">Binjai Juice Bar</option>
+                        <option value="family">Family Onigiri</option>
+                    </select>
+                </div>
+                
+                <button id="nextBtn" class="next-button" disabled>Next</button>
+            </div>
+        </div>
+
+        <!-- Screen 2: Outlets and Top Up -->
+        <div id="screen2" class="screen">
+            <div class="card">
+                <h2>SMS Top Up</h2>
+                <h3>Choose Business</h3>
+                
+                <div class="selected-business">
+                    <span id="selectedBusinessName">Silvertree Restaurants</span>
+                    <button id="backBtn" class="back-arrow">&#8250;</button>
+                </div>
+                
+                <div class="outlets-container">
+                    <div class="outlets-header">
+                        <span>Outlets:</span>
+                        <span>Top Up:</span>
+                    </div>
+                    
+                    <div id="outletsList" class="outlets-list">
+                        <!-- Outlets will be populated dynamically -->
+                    </div>
+                    
+                    <div class="total-section">
+                        <span class="total-label">Total</span>
+                        <span id="totalAmount" class="total-amount">0</span>
+                    </div>
+                </div>
+                
+                <button id="generateQuoteBtn" class="generate-button">Generate Quotation</button>
+            </div>
+        </div>
+
+        <!-- Success Modal -->
+        <div id="successModal" class="modal">
+            <div class="modal-content">
+                <h3>Success!</h3>
+                <p>Quotation has been generated and sent to the client's email.</p>
+                <p>SMS credits have been credited to the client's account.</p>
+                <button id="closeModal" class="close-button">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
